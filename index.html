@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <title>TURU - Auth</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1 class="logo">TURU</h1>
+
+  <!-- Tela de Login -->
+  <div class="login-screen" id="login">
+    <div class="email-pass">
+      <h1>ENTRAR</h1>
+      <label for="email-login">Insira seu nome de usuário ou email</label>
+      <input
+          type="text"
+          id="email-login"
+          name="email"/>
+    </div>
+
+    <div class="email-pass">
+      <label for="password-login">Insira sua senha</label>
+      <input
+              type="password"
+              id="password-login"
+              name="password"/>
+    </div>
+    <button class="auth-button" id="btn-login">ENTRAR</button>
+    <p>Não tem uma conta? <a href="#" id="gotosignup">crie sua conta gratuitamente.</a></p>
+    <h1><---------ou---------></h1>
+    <button class="auth-button google-auth btn-google"><i class="fa-brands fa-google"></i> Continuar com google</button>
+    <p style="color: #ff0000;">AVISO: LOGIN POR GOOGLE DEVE SER FEITO NUMA NOVA ABA(clique em FULL)</p>
+  </div>
+
+  <!-- Tela de Registro -->
+  <div class="login-screen" id="signup" style="display: none;">
+    <h1>REGISTRAR</h1>
+    <div class="email-pass">
+      <label for="email-reg">Insira seu email</label>
+      <input
+          type="text"
+          id="email-reg"
+          name="email"/>
+    </div>
+
+    <div class="email-pass">
+      <label for="password-reg">Insira sua senha</label>
+      <input
+              type="password"
+              id="password-reg"
+              name="password"/>
+    </div>
+    <button class="auth-button" id="btn-signup">REGISTRAR</button>
+    <p>Já tem uma conta? <a href="#" id="gotologin">entra na sua conta.</a></p>
+    <h1><---------ou---------></h1>
+    <button class="auth-button google-auth btn-google"><i class="fa-brands fa-google"></i> Continuar com google</button>
+    <p style="color: #ff0000;">AVISO: LOGIN POR GOOGLE DEVE SER FEITO NUMA NOVA ABA(clique em FULL)</p>
+  </div>
+
+  <script src="https://kit.fontawesome.com/1ee371e99a.js" crossorigin="anonymous"></script>
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
