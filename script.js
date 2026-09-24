@@ -6,7 +6,8 @@ import {
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword,
   GoogleAuthProvider,
-  signInWithPopup
+  signInWithPopup,
+  onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-auth.js";
 
 // --- CONFIGURAÇÃO DO FIREBASE ---
@@ -58,6 +59,24 @@ const btnSignup = document.getElementById("btn-signup");
 // Botões do Google
 const googleButtons = document.querySelectorAll(".btn-google");
 
+// --- FUNÇÃO AUXILIAR PARA LIMPAR CAMPOS ---
+function clearInputs() {
+  emailLoginInput.value = "";
+  passwordLoginInput.value = "";
+  emailRegInput.value = "";
+  passwordRegInput.value = "";
+}
+
+// --- OBSERVADOR DE ESTADO DE AUTENTICAÇÃO ---
+// Detecta automaticamente se o usuário já está logado
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log("Usuário autenticado:", user);
+    // Exemplo: você pode redirecionar para uma página principal aqui no futuro
+    // window.location.href = "dashboard.html";
+  }
+});
+
 // --- EVENTO DE CADASTRO COM EMAIL E SENHA ---
 btnSignup.addEventListener("click", () => {
   const email = emailRegInput.value;
@@ -72,6 +91,7 @@ btnSignup.addEventListener("click", () => {
     .then((userCredential) => {
       const user = userCredential.user;
       alert("Conta criada com sucesso! Usuário: " + user.email);
+      clearInputs();
     })
     .catch((error) => {
       console.error("Erro no cadastro:", error);
@@ -93,6 +113,7 @@ btnLogin.addEventListener("click", () => {
     .then((userCredential) => {
       const user = userCredential.user;
       alert("Login efetuado com sucesso! Bem-vindo " + user.email);
+      clearInputs();
     })
     .catch((error) => {
       console.error("Erro no login:", error);
@@ -107,6 +128,7 @@ googleButtons.forEach((button) => {
       .then((result) => {
         const user = result.user;
         alert("Autenticado com sucesso via Google! Bem-vindo " + user.displayName);
+        clearInputs();
       })
       .catch((error) => {
         console.error("Erro na autenticação com Google:", error);
