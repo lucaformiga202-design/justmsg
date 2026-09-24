@@ -1,9 +1,9 @@
 // --- IMPORTAÇÕES DO FIREBASE (CDN ESM) ---
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
+import { 
+  getAuth, 
+  createUserWithEmailAndPassword, 
   signInWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup
