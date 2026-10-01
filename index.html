@@ -22,10 +22,10 @@
       <label for="password-login">Insira sua senha</label>
       <input type="password" id="password-login" name="password"/>
     </div>
-    <button class="auth-button" id="btn-login">ENTRAR</button>
+    <button type="button" class="auth-button" id="btn-login">ENTRAR</button>
     <p>Não tem uma conta? <a href="#" id="gotosignup">crie sua conta gratuitamente.</a></p>
     <h1><---------ou---------></h1>
-    <button class="auth-button google-auth btn-google"><i class="fa-brands fa-google"></i> Continuar com google</button>
+    <button type="button" class="auth-button google-auth btn-google"><i class="fa-brands fa-google"></i> Continuar com google</button>
   </div>
 
   <!-- Tela de Registro -->
@@ -40,13 +40,13 @@
       <label for="password-reg">Insira sua senha</label>
       <input type="password" id="password-reg" name="password"/>
     </div>
-    <button class="auth-button" id="btn-signup">REGISTRAR</button>
+    <button type="button" class="auth-button" id="btn-signup">REGISTRAR</button>
     <p>Já tem uma conta? <a href="#" id="gotologin">entra na sua conta.</a></p>
     <h1><---------ou---------></h1>
-    <button class="auth-button google-auth btn-google"><i class="fa-brands fa-google"></i> Continuar com google</button>
+    <button type="button" class="auth-button google-auth btn-google"><i class="fa-brands fa-google"></i> Continuar com google</button>
   </div>
 
-  <!-- Tela do Aplicativo JustMSG (Chat Principal) -->
+  <!-- Tela do Aplicativo JustMSG (Chat) -->
   <div class="chat-screen" id="chat-container" style="display: none;">
     <div class="chat-header">
       <div class="user-info">
@@ -54,13 +54,13 @@
         <span id="user-display">Usuário</span>
       </div>
       <div class="header-actions">
-        <button id="btn-open-settings" class="icon-button"><i class="fa-solid fa-gear"></i> Configurações</button>
-        <button id="btn-logout" class="logout-button">Sair</button>
+        <button type="button" id="btn-open-settings" class="icon-button"><i class="fa-solid fa-gear"></i> Configurações</button>
+        <button type="button" id="btn-logout" class="logout-button">Sair</button>
       </div>
     </div>
 
     <div class="chat-messages" id="messages-container">
-      <!-- Mensagens em tempo real entram aqui -->
+      <!-- Mensagens entram aqui -->
     </div>
 
     <div class="chat-input-area">
@@ -70,11 +70,11 @@
       <input type="file" id="file-input" style="display: none;">
       
       <input type="text" id="message-input" placeholder="Digite sua mensagem...">
-      <button id="btn-send" class="auth-button">Enviar</button>
+      <button type="button" id="btn-send" class="auth-button">Enviar</button>
     </div>
   </div>
 
-  <!-- Modal / Aba de Configurações -->
+  <!-- Modal de Configurações -->
   <div class="modal-overlay" id="settings-modal" style="display: none;">
     <div class="modal-card">
       <h2>Configurações do Perfil</h2>
@@ -95,8 +95,8 @@
       </div>
 
       <div class="modal-buttons">
-        <button id="btn-save-settings" class="auth-button">Salvar</button>
-        <button id="btn-close-settings" class="logout-button">Cancelar</button>
+        <button type="button" id="btn-save-settings" class="auth-button">Salvar</button>
+        <button type="button" id="btn-close-settings" class="logout-button">Cancelar</button>
       </div>
     </div>
   </div>
