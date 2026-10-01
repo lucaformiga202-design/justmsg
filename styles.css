@@ -77,12 +77,12 @@ a {
     color: #fff;
 }
 
-/* --- ESTILOS DO CHAT JUSTMSG --- */
+/* --- ESTILOS DO CHAT --- */
 .chat-screen {
     background-color: #bb00ff;
     width: 100%;
-    max-width: 600px;
-    height: 600px;
+    max-width: 650px;
+    height: 650px;
     border-radius: 20px;
     padding: 20px;
     display: flex;
@@ -97,6 +97,34 @@ a {
     align-items: center;
     border-bottom: 2px solid #570f71;
     padding-bottom: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.icon-button {
+    background-color: #570f71;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
     font-weight: bold;
 }
 
@@ -141,16 +169,97 @@ a {
     display: block;
 }
 
+.msg-image {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.msg-file-link {
+    display: inline-block;
+    color: #00ffff;
+    margin-top: 5px;
+    word-break: break-all;
+}
+
 .chat-input-area {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
-.chat-input-area input {
+.chat-input-area input[type="text"] {
     flex: 1;
     height: 50px;
     border-radius: 15px;
     border: none;
     padding: 0 15px;
     font-size: 16px;
+}
+
+.file-label {
+    background-color: #570f71;
+    padding: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* --- MODAL DE CONFIGURAÇÕES --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-card {
+    background-color: #bb00ff;
+    padding: 25px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-preview img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group input {
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
 }
