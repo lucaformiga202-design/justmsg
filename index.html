@@ -46,18 +46,58 @@
     <button class="auth-button google-auth btn-google"><i class="fa-brands fa-google"></i> Continuar com google</button>
   </div>
 
-  <!-- Tela do aplicativo JustMSG (Chat) -->
+  <!-- Tela do Aplicativo JustMSG (Chat Principal) -->
   <div class="chat-screen" id="chat-container" style="display: none;">
     <div class="chat-header">
-      <span id="user-display">Usuário</span>
-      <button id="btn-logout" class="logout-button">Sair</button>
+      <div class="user-info">
+        <img id="header-avatar" src="https://via.placeholder.com/40" alt="Avatar">
+        <span id="user-display">Usuário</span>
+      </div>
+      <div class="header-actions">
+        <button id="btn-open-settings" class="icon-button"><i class="fa-solid fa-gear"></i> Configurações</button>
+        <button id="btn-logout" class="logout-button">Sair</button>
+      </div>
     </div>
+
     <div class="chat-messages" id="messages-container">
-      <!-- As mensagens entram aqui dinamicamente -->
+      <!-- Mensagens em tempo real entram aqui -->
     </div>
+
     <div class="chat-input-area">
+      <label for="file-input" class="file-label" title="Anexar arquivo">
+        <i class="fa-solid fa-paperclip"></i>
+      </label>
+      <input type="file" id="file-input" style="display: none;">
+      
       <input type="text" id="message-input" placeholder="Digite sua mensagem...">
       <button id="btn-send" class="auth-button">Enviar</button>
+    </div>
+  </div>
+
+  <!-- Modal / Aba de Configurações -->
+  <div class="modal-overlay" id="settings-modal" style="display: none;">
+    <div class="modal-card">
+      <h2>Configurações do Perfil</h2>
+      
+      <div class="profile-preview">
+        <img id="settings-avatar-preview" src="https://via.placeholder.com/80" alt="Foto de perfil">
+        <input type="file" id="avatar-input" accept="image/*">
+      </div>
+
+      <div class="input-group">
+        <label for="settings-name">Nome de Exibição:</label>
+        <input type="text" id="settings-name" placeholder="Seu nome">
+      </div>
+
+      <div class="input-group">
+        <label for="settings-phone">Número de Telefone:</label>
+        <input type="text" id="settings-phone" placeholder="+55 (11) 99999-9999">
+      </div>
+
+      <div class="modal-buttons">
+        <button id="btn-save-settings" class="auth-button">Salvar</button>
+        <button id="btn-close-settings" class="logout-button">Cancelar</button>
+      </div>
     </div>
   </div>
 
