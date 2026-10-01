@@ -3,15 +3,16 @@
 
 <head>
   <meta charset="utf-8">
-  <title>JustMSG</title>
+  <title>Turu | JustMSG</title>
   <link rel="stylesheet" href="./styles.css">
 </head>
 
 <body>
-  <h1 class="logo">JustMSG</h1>
-
   <!-- Tela de Login -->
   <div class="login-screen" id="login">
+    <h1 class="logo">Turu</h1>
+    <span class="sublogo">Acesse o JustMSG</span>
+
     <div class="email-pass">
       <h1>ENTRAR</h1>
       <label for="email-login">Insira seu email</label>
@@ -30,6 +31,9 @@
 
   <!-- Tela de Registro -->
   <div class="login-screen" id="signup" style="display: none;">
+    <h1 class="logo">Turu</h1>
+    <span class="sublogo">Crie sua conta Turu</span>
+
     <h1>REGISTRAR</h1>
     <div class="email-pass">
       <label for="email-reg">Insira seu email</label>
@@ -49,6 +53,10 @@
   <!-- Tela do Aplicativo JustMSG (Chat) -->
   <div class="chat-screen" id="chat-container" style="display: none;">
     <div class="chat-header">
+      <div class="app-brand">
+        <span class="brand-title">JustMSG</span>
+        <span class="brand-subtitle">by Turu</span>
+      </div>
       <div class="user-info">
         <img id="header-avatar" src="https://via.placeholder.com/40" alt="Avatar">
         <span id="user-display">Usuário</span>
@@ -77,7 +85,7 @@
   <!-- Modal de Configurações -->
   <div class="modal-overlay" id="settings-modal" style="display: none;">
     <div class="modal-card">
-      <h2>Configurações do Perfil</h2>
+      <h2>Configurações do Perfil Turu</h2>
       
       <div class="profile-preview">
         <img id="settings-avatar-preview" src="https://via.placeholder.com/80" alt="Foto de perfil">
